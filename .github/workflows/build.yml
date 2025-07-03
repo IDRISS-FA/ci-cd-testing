@@ -18,10 +18,7 @@ jobs:
       - name: Install Dependencies
         run: npm install
       - name: install vite
-        run : npm install vite --save-dev 
-      - uses: actions/checkout@v4
-        with:
-          sparse-checkout: .
+        run : npm install -g vite
       - name: Build Project
         run: npm run build
       - uses: actions/checkout@v4
