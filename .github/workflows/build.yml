@@ -4,9 +4,6 @@ jobs:
   # Build Job now
   build:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./react
     steps:
 
       - name: Checkout Code
