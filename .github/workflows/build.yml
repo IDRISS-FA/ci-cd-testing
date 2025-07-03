@@ -18,6 +18,8 @@ jobs:
       - uses: actions/checkout@v4
         with:
           sparse-checkout: .
+      - name: list repo
+        run: ls -la
       - name: Install Dependencies
         run: npm install
       - uses: actions/checkout@v4
