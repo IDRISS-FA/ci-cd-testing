@@ -5,23 +5,22 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-        with:
-          sparse-checkout: .
+
       - name: Checkout Code
         uses: actions/checkout@v4
-      - uses: actions/checkout@v4
-        with:
-          sparse-checkout: .
+        
       - name: Install Node
         uses: actions/setup-node@v4
-      - uses: actions/checkout@v4
-        with:
-          sparse-checkout: .
+
       - name: list repo
         run: ls -la
+
+      - name: change dir
+        run: cd my-react-app
+        
       - name: Install Dependencies
         run: npm install
+        
       - uses: actions/checkout@v4
         with:
           sparse-checkout: .
