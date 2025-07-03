@@ -5,14 +5,29 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: .
       - name: Checkout Code
         uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: .
       - name: Install Node
         uses: actions/setup-node@v4
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: .
       - name: Install Dependencies
         run: npm install
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: .
       - name: Build Project
         run: npm run build
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: .
       - name: Upload artifact to enable deployment
         uses: actions/upload-artifact@v4
         with:
