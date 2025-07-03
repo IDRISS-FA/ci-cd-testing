@@ -16,7 +16,7 @@ jobs:
         run: ls -la
 
       - name: change dir
-        run: cd my-react-app
+        run: cd ./my-react-app
         
       - name: list repo
         run: ls -la
