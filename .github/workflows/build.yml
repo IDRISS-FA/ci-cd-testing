@@ -1,7 +1,7 @@
 name: DevOps-GitHibActions
 on: push
 jobs:
-  # Build Job
+  # Build Job now
   build:
     runs-on: ubuntu-latest
     steps:
